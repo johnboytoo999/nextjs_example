@@ -7,6 +7,9 @@ async function bootstrap() {
     whitelist: true,
     forbidNonWhitelisted: true, //將多的欄位擋掉
     transform: true, //自動轉換型別
+    transformOptions:{
+      enableImplicitConversion: true // 省略 @Type(() => Number)
+    }
   }))
   await app.listen(3000);
 }
