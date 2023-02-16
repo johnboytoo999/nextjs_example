@@ -8,5 +8,7 @@ import { Event } from '../events/entites/event.entity';
 @Module({
     imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event])],
     controllers: [CoffeeController], 
-    providers: [CoffeeService]})
+    providers: [CoffeeService],
+    exports:[CoffeeService],
+})
 export class CoffeeModule {}
